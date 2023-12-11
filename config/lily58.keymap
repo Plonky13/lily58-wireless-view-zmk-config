@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
@@ -122,11 +123,11 @@
 
             label = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans        &trans     &trans  &trans
-&trans  &aa     &oe     &ae     &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans     &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans          &trans          &trans        &trans     &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans                          &trans          &trans          &trans        &trans     &trans  &trans
+&trans      &aa           &oe           &ae           &trans        &trans                          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none   &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans     &trans  &trans
+                                        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
