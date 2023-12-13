@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
@@ -94,7 +95,7 @@
 &kp TAB                  &kp SQT         &kp COMMA       &kp PERIOD          &kp P             &kp Y                                   &kp F         &kp G              &kp C                &kp R            &kp L            &kp BACKSPACE
 &mt LEFT_CONTROL ESCAPE  &mt LEFT_GUI A  &mt LEFT_ALT O  &mt LEFT_CONTROL E  &mt LEFT_SHIFT U  &kp I                                   &kp D         &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL T  &mt RIGHT_ALT N  &mt RIGHT_GUI S  &kp HOME
 &kp LSHFT                &kp SEMICOLON   &kp Q           &kp J               &kp K             &kp X         &caps_word    &caps_word  &kp B         &kp M              &kp W                &kp V            &kp Z            &kp END
-                                                         &kp LALT            &mo 2             &mod 1 SPACE  &mod 2 ESC    &kp TAB     &mod 3 ENTER  &kp BSPC           &kp DEL
+                                                         &kp LALT            &mo 2             &mod 1 SPACE  &mod 2 TAB    &kp ESC     &mod 3 ENTER  &kp BSPC           &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -130,11 +131,11 @@
 
             label = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans          &trans        &trans                    &trans  &trans    &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans          &trans        &trans                    &trans  &trans    &trans  &trans  &kp RIGHT  &trans
-&trans  &aa     &oe     &ae             &trans        &trans                    &trans  &kp LEFT  &trans  &trans  &none      &trans
-&trans  &trans  &trans  &kp DOWN_ARROW  &kp UP_ARROW  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans     &trans
-                        &trans          &trans        &trans  &trans    &trans  &trans  &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans    &trans  &trans  &trans     &trans
+&trans      &trans        &trans        &trans          &trans        &trans                          &trans  &trans    &trans  &trans  &kp RIGHT  &trans
+&trans      &aa           &oe           &ae             &trans        &trans                          &trans  &kp LEFT  &trans  &trans  &none      &trans
+&trans      &trans        &trans        &kp DOWN_ARROW  &kp UP_ARROW  &trans        &trans    &trans  &trans  &trans    &trans  &trans  &trans     &trans
+                                        &trans          &trans        &trans        &trans    &trans  &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
