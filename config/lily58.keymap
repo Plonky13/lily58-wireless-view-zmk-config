@@ -10,10 +10,11 @@
 
 &mt {
     hold-trigger-key-positions = <>;
-    flavor = "balanced";
+    flavor = "tap-preferred";
     require-prior-idle-ms = <0>;
     quick-tap-ms = <0>;
-    tapping-term-ms = <100>;
+    tapping-term-ms = <150>;
+    hold-while-undecided;
 };
 
 / {
